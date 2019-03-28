@@ -1,0 +1,9 @@
+arbol
+casa
+estanteria
+frigorifico
+mesa
+pajaro
+perro
+silla
+television
