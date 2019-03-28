@@ -26,19 +26,19 @@ public class Ejercicio4 {
       BufferedWriter bw = new BufferedWriter(new FileWriter(args[0] + "_sort.txt"));
       String linea = "";
       ArrayList<String> lista = new ArrayList<String>();
-
+      //Lee la linea hasta el final de archivo y agnade su contenido al arraylist
       while (linea != null) {
         linea = br.readLine();
         lista.add(linea);
       }
-      lista.sort(null);
+      lista.sort(null); //Ordena el arrayList alfabeticamentes
 
-      for (String x : lista) {
+      for (String x : lista) { //Escribe la lista ordenada
         bw.write(x);
       }
 
       System.out.println("Las palabras se han ordenado. Programa terminado");
-      br.close();
+      br.close(); //Cierre de archivos
       bw.close();
 
     } catch (Exception e) {

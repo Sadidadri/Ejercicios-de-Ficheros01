@@ -17,12 +17,12 @@ public class Ejercicio6 {
     try {
       BufferedReader br = new BufferedReader(new FileReader(args[0]+".txt"));
       String linea = "";
-      String palabraDeseada = ""+args[1];
-      int coincidencias = 0;
+      String palabraDeseada = ""+args[1]; //Palabra la cual queremos buscar en el fichero
+      int coincidencias = 0; //Numero de veces que se encuentra la palabra
       while(linea != null) {
         linea = br.readLine();
-        String[] palabras = linea.split(" ");
-        for(String x : palabras) {
+        String[] palabras = linea.split(" "); //Separa las palabras separadas por espacios y las almacena en un array de string
+        for(String x : palabras) { //Recorre el array y si coincide con la palabra deseada, aumenta el contador
           if (x.equals(palabraDeseada)) {
             coincidencias++;
           }
@@ -31,7 +31,7 @@ public class Ejercicio6 {
       
       System.out.println("La palabra "+palabraDeseada+" se ha encontrado "+coincidencias+" veces.");
       System.out.println("Programa terminado");
-      br.close();
+      br.close(); //Cierre de archivo
     } catch (Exception e) {
       System.err.println("Error, no se ha podido encontrar esas coincidencias.");
     }
